@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 public class CurrencyGraph {
 
@@ -23,7 +25,7 @@ public class CurrencyGraph {
                 System.out.println("  -> " + conversion.getConversionRate() + " " + conversion.getConvertsTo());
                 current = current.getNext();
             }
-            System.out.println(); // Print an empty line after each currency's conversions
+            System.out.println();
         }
     }
 
@@ -37,7 +39,6 @@ public class CurrencyGraph {
             adjList.add(list);
         }
 
-        // Add the new conversion to the found or newly created ConversionDirectionList
         list.addConversion(newConversion, convertsTo);
     }
 

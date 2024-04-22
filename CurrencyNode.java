@@ -1,15 +1,15 @@
 /**
      * Inner class representing a node in the linked list storing an edge.
      */
-    public class CurrencyNode { // Stores the current country/currency
+    class CurrencyNode { // Stores the current country/currency
 
         private Conversion conversion;
         private String label;
         private CurrencyNode next;
 
         /**
-         * Constructs a node with the given edge and null next pointer.
-         * @param conversion The edge to be stored in the node.
+         * Constructs a currency node, representing a node in the graph with a
+         * conversion as an edge and the node label.
          */
         public CurrencyNode(Conversion conversion, String label) {
             this.conversion = conversion;
@@ -29,6 +29,7 @@
             return conversion;
         }
 
+        
         public void setNext(CurrencyNode node) {
             next = node;
         }
